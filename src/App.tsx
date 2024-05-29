@@ -6,11 +6,11 @@ import "./App.css";
 function App() {
   let count = 0;
   return (
-  <div>
-    <h1>{count}</h1>
-    <button onClick = {}>증가</button>
-  </div>
-);
+    <div>
+      <h1>{count}</h1>
+      <button onClick={() => console.log("클릭됨")}>증가</button>
+    </div>
+  );
 }
 
 export default App;
