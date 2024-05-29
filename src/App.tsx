@@ -3,8 +3,6 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
-new Array(1000).fill(0).map(e => 0)
-
 function Counter() {
   const 리턴값 = useState(0);
   const count = 리턴값[0];
@@ -29,11 +27,29 @@ function Counter() {
 }
 
 function App() {
-  const counterArray = [];
-  for (let i = 0; i < 1000; i++) {
-    counterArray.push(<Counter></Counter>);
-  }
-  return <div>{counterArray}</div>
-  }
+  // const counterArray = [];
+  // for (let i = 0; i < 1000; i++) {
+  //   counterArray.push(<Counter></Counter>);
+  // }
+  const schoolnames = [
+    "경기고",
+    "성수고",
+    "창동고",
+    "성신여고",
+    "양명여고",
+    "성신고",
+  ];
+
+  return (
+    <div>
+      {schoolnames.map((schoolname) => (
+        <div>
+          <h1>{schoolname}</h1>
+          <Counter></Counter>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default App;
