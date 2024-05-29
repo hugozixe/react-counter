@@ -3,45 +3,38 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
-function Header() {
-return(
-<header>
-  <h1><a href=""></a></h1>
-</header>
-)
-}
+function Counter() {
+  const 리턴값 = useState(0);
+  const count = 리턴값[0];
+  const setCount = 리턴값[1];
 
-function Nav() {
-return(
-<nav>
-  <ol>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ol>
-</nav>
-)
-}
+  let 초기화버튼;
+  if (count !== 0) {
+    초기화버튼 = <button onClick={() => setCount(0)}>초기화</button>;
+  }
 
-function Article() {
-return(
-<article>
-  <h2></h2>
-</article>
-)
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button onClick={() => setCount((현재카운트) => 현재카운트 + 1)}>
+        증가
+      </button>
+      <button onClick={() => setCount((현재카운트) => 현재카운트 - 1)}>
+        감소
+      </button>
+      <button>{초기화버튼}</button>
+    </div>
+  );
 }
 
 function App() {
- return(
-<div>
-  <Header></Header>
-  <Nav></Nav>
-  <Article></Article>
-</div>
-);
+  return (
+    <div>
+      <Counter />
+      <Counter></Counter>
+      <Counter></Counter>
+    </div>
+  );
 }
-
-
 
 export default App;
