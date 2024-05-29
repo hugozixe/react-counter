@@ -4,9 +4,10 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
+  let count = 0;
   return (
   <div>
-    <h1>0</h1>
+    <h1>{count}</h1>
     <button onClick = {}>증가</button>
   </div>
 );
